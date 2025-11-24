@@ -1,4 +1,4 @@
-import 'package:custom_refresh_indicator/screen/demo_page.dart';
+import 'package:custom_refresh_indicator_flutter/screen/demo_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
