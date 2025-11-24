@@ -45,9 +45,10 @@ class _DemoPageState extends State<DemoPage> {
       body: LogoRefreshIndicator(
         onRefresh: _loadMoreData,
         // The custom image inside the spinner
-        logo: const Icon(Icons.flutter_dash, color: Colors.blue, size: 30),
+        // logo: const Icon(Icons.flutter_dash, color: Colors.blue, size: 30),
         // Alternatively, use an image:
-        // logo: Image.asset('assets/logo.png'),
+        // logo: Image.asset('assets/bponi_logo.png'),
+        logo: 'assets/bponi_logo.png',
 
         // The List
         child: ListView.builder(

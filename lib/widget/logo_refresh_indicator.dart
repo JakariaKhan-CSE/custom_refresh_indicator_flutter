@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 class LogoRefreshIndicator extends StatefulWidget {
   final Future<void> Function() onRefresh;
   final Widget child;
-  final Widget logo;
+  final String logo;
   final double refreshTriggerPullDistance;
   final double indicatorSize;
 
@@ -57,9 +57,12 @@ class _LogoRefreshIndicatorState extends State<LogoRefreshIndicator> {
                   children: [
                     // The Inner Image
                     SizedBox(
-                      width: widget.indicatorSize * 0.6,
-                      height: widget.indicatorSize * 0.6,
-                      child: widget.logo,
+                      width: widget.indicatorSize * 0.6-1,
+                      height: widget.indicatorSize * 0.6-1,
+                      child: CircleAvatar(
+                          // radius: 15,
+                          backgroundImage: AssetImage(widget.logo)
+                      ),
                     ),
                     // The Outer Progress Indicator
                     CircularProgressIndicator(
@@ -72,6 +75,7 @@ class _LogoRefreshIndicatorState extends State<LogoRefreshIndicator> {
                       valueColor: AlwaysStoppedAnimation<Color>(
                         Theme.of(context).primaryColor,
                       ),
+
                     ),
                   ],
                 ),

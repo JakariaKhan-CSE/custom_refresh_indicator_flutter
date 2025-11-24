@@ -1,5 +1,3 @@
-import 'dart:async';
-import 'dart:math' as math;
 import 'package:custom_refresh_indicator/screen/demo_page.dart';
 import 'package:flutter/material.dart';
 
