@@ -44,7 +44,41 @@ class _DemoPageForPackageState extends State<DemoPageForPackage> {
       body: CustomMaterialIndicator(
         onRefresh: _loadMoreData,
         indicatorBuilder: (context, controller) {
-          return CircularProgressIndicator();
+          return Padding(
+            padding: EdgeInsets.all(6.0),
+            child: Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                color: Colors.transparent,
+                shape: BoxShape.circle,
+                // border: Border.all(
+                //   color: Colors.redAccent,
+                //   width: 2.0
+                // )
+              ),
+              child: Stack(
+                children: [
+                  // Circular Progress Background
+                  CircularProgressIndicator(
+                    backgroundColor: Colors.grey[200],
+                    valueColor: AlwaysStoppedAnimation(Colors.redAccent),
+                    strokeWidth: 2.0,
+                  ),
+                  // image in the center
+                  Center(
+                    child: Container(
+                      width: 30,
+                      height: 30,
+                      child: ClipOval(
+                        child: Image.asset('assets/bponi_logo.png',fit: BoxFit.cover,),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+          );
         },
         child: ListView.builder(
           // IMPORTANT: physics must allow overscroll bouncing for this to work

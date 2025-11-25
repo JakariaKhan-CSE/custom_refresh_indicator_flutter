@@ -1,4 +1,5 @@
 import 'package:custom_refresh_indicator_flutter/screen/demo_page.dart';
+import 'package:custom_refresh_indicator_flutter/screen/demo_page_using_package.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         useMaterial3: true,
       ),
-      home: const DemoPage(),
+      home: const DemoPageForPackage(),
     );
   }
 }
